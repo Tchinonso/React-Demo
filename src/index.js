@@ -1,7 +1,5 @@
 import React from "react"
-import ReactDOM from "react-dom/client"
-import { StrictMode } from "react";
-import { BrowserRouter } from "react-router-dom";
+import ReactDOM from "react-dom"
 // import App from "./components/App"
 // import "./styles/global.css"
 // import App from "./components/GoodUse/App"
@@ -11,21 +9,17 @@ import { BrowserRouter } from "react-router-dom";
 // import App from "./components/image-slider-carousel-with-ReactJs/App"
 // import App from "./components/ReactRoute/App";
 import App from './components/Portfolio/App'
-import GlobalStyles from "./styles/GlobalStyle";
-import Typography from './styles/Typography'
+import GlobalStyles from "./components/Portfolio/styles/GlobalStyle";
+import Typography from './components/Portfolio/styles/Typography'
 
 
 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-
-	<StrictMode>
-		<BrowserRouter>
-			<GlobalStyles />
-			<Typography />
-			<App />
-		</BrowserRouter>
-	</StrictMode>
-
+ReactDOM.render(
+  <>
+    <GlobalStyles />
+    <Typography />
+    <App />
+	</>,
+	document.getElementById('root')
 );

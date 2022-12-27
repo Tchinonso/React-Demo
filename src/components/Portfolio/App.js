@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Footer from './Footer';
 import NavMenu from './NavMenu';
 import About from './Pages/About';
 import Contact from './Pages/Contact';
 import Home from './Pages/Home';
 import Projects from './Pages/Projects';
-import HeroSection from './HeroSection';
+import ScrollToTop from './ScrollToTop';
 
 
   
@@ -15,8 +16,7 @@ export default function App() {
     <>
       <BrowserRouter>
         <NavMenu />
-        <HeroSection/>
-
+        <ScrollToTop />
         <Switch>
           <Route path="/about">
             <About />
@@ -31,6 +31,7 @@ export default function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </BrowserRouter>
     </>
   );

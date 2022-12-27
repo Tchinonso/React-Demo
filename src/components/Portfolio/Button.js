@@ -10,7 +10,7 @@ margin-top:2rem;
 	padding:0.7em 2em;
 	border-radius:8px;
 	display:inline-block;
-	border:2px solid var(--gray-1);
+	border:2px solid yellow;
 	color:${(props) => (props.outline ? 'var(--gray-1)' : 'yellow')};
 }
 @media only screen and (max-width:768px){
@@ -22,7 +22,7 @@ margin-top:2rem;
 
 const Button = ({btnLink='test',btnText='test',outline=false}) => {
   return (
-	<ButtonStyle outline={outline}>
+	<ButtonStyle outline={outline} className='button-wrapper'>
 		  <Link className='button' to={btnLink}>{btnText}</Link>
 	</ButtonStyle>
   )
