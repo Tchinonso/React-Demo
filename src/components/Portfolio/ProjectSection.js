@@ -80,7 +80,7 @@ const ProjectSection = () => {
               },
             }}>
             {projects.map((project, index) => {
-              if (index >= 5) return;
+              if (index >= 5) return project;
               return (
                 <SwiperSlide key={project.id}>
                   <ProjectItem img={project.img } title={project.name} desc={project.desc} />
