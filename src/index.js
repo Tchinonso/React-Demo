@@ -1,5 +1,6 @@
 import React from "react"
-import ReactDOM from "react-dom"
+import ReactDOM from "react-dom/client"
+import { BrowserRouter } from "react-router-dom";
 import './index.css'
 // import App from "./components/App"
 // import "./styles/global.css"
@@ -12,7 +13,8 @@ import './index.css'
 // import App from './components/Portfolio/App'
 // import GlobalStyles from "./components/Portfolio/styles/GlobalStyle";
 // import Typography from './components/Portfolio/styles/Typography'
-import App from "./Komponents/SimpleNavKomponent/App"
+// import App from "./Komponents/SimpleNavKomponent/App"
+import App from "./NewComponent/App";
 
 
 
@@ -26,9 +28,20 @@ import App from "./Komponents/SimpleNavKomponent/App"
 // 	document.getElementById('root')
 // );
 
-ReactDOM.render(
-  <>
-    <App />
-  </>,
-  document.getElementById("root")
-);
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <BrowserRouter>
+//       <App />
+//     </BrowserRouter>
+//   </React.StrictMode>,
+//   document.getElementById("root")
+// );
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App/>
+    </BrowserRouter>
+   </React.StrictMode>
+)
