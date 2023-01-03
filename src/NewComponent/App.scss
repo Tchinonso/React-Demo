@@ -1,0 +1,24 @@
+$primary-color:#ffd700;
+
+@import 'animate.css';
+
+@font-face {
+    font-family: 'RobotoMono Regular';
+    src: url('./assets/fonts/RobotoMono-Regular.ttf') format('ttf');
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Montserrat SemiBold';
+    src: url('./assets/fonts/Montserrat-SemiBold.ttf') format('ttf');
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Montserrat Bold';
+    src: url('./assets/fonts/Montserrat-Bold.ttf') format('ttf');
+    font-style: normal;
+  }
+
+input,
+textarea{
+	font-family: 'Montserrat SemiBold';
+}
