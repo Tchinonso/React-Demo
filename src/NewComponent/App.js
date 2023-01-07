@@ -1,17 +1,35 @@
 import React from 'react'
 import './App.scss'
-import { BrowserRouter as Routes, Route} from 'react-router-dom'
+import { BrowserRouter as Routes, Route, Switch} from 'react-router-dom'
 import Layout from './Layout/Layout'
+import Home from './Layout/Home/Home'
+import About from './Layout/About/About'
 
 const App = () => {
   return (
-	<>
-	 <Routes>
-			  <Route path='/'>
-				  <Layout/>
-			  </Route>
-	 </Routes>
-	</>
+    <>
+      <Routes>
+      
+          <Layout />
+        
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path='/'>
+            <Home />
+          </Route>
+        </Switch>
+      </Routes>
+      {/* <Routes >
+        <Route path='/' component={ <Layout /> }>
+          <Route path='/about' component={ <About /> } />
+          <Route index component={ <Home /> } />
+          
+        </Route>
+
+      </Routes> */}
+    </>
   )
 }
 
